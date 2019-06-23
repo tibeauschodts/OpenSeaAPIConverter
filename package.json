@@ -1,7 +1,7 @@
 {
-    "name": "backend",
+    "name": "opensea-api-converter",
     "version": "1.0.0",
-    "description": "Backend server for Stingrayy, a OpenSea asset browser",
+    "description": "This OpenSea API converter functions as a backend server for Stingrayy, a NFT browser",
     "main": "build/server.js",
     "scripts": {
         "start": "tsc -p . && node build/server.js",
