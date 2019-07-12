@@ -33,7 +33,7 @@ app.listen(port, () => {
     console.log("Press CTRL-C to stop");
 });
 
-app.get('/', (req, res) => {
+app.get('/assets/', (req, res) => {
     APIService.getJSON(baseUrl, (result: any) => {
         let assets = AssetFactory.createAssets(result);
         res.send(assets);
