@@ -39,3 +39,12 @@ app.get('/assets/', (req, res) => {
         res.send(assets);
     });  
 });
+
+app.get('/assets/:name', (req, res) => {
+    let search = `&search=${req.params.name}`;
+
+    APIService.getJSON(baseUrl + search, (result: any) => {
+        let assets = AssetFactory.createAssets(result);
+        res.send(assets);
+    });
+});
